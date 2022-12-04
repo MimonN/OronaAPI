@@ -1,0 +1,12 @@
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\Entities\bin\Debug\net7.0\Entities.deps.json
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\Entities\bin\Debug\net7.0\Entities.dll
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\Entities\bin\Debug\net7.0\Entities.pdb
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\Entities\obj\Debug\net7.0\Entities.csproj.AssemblyReference.cache
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\Entities\obj\Debug\net7.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\Entities\obj\Debug\net7.0\Entities.AssemblyInfoInputs.cache
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\Entities\obj\Debug\net7.0\Entities.AssemblyInfo.cs
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\Entities\obj\Debug\net7.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\Entities\obj\Debug\net7.0\Entities.dll
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\Entities\obj\Debug\net7.0\refint\Entities.dll
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\Entities\obj\Debug\net7.0\Entities.pdb
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\Entities\obj\Debug\net7.0\ref\Entities.dll
