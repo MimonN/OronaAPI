@@ -75,3 +75,9 @@ C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\OronaApi\obj\Deb
 C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\OronaApi\obj\Debug\net7.0\ref\OronaApi.dll
 C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\OronaApi\bin\Debug\net7.0\Entities.dll
 C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\OronaApi\bin\Debug\net7.0\Entities.pdb
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\OronaApi\bin\Debug\net7.0\Contracts.dll
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\OronaApi\bin\Debug\net7.0\Repository.dll
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\OronaApi\bin\Debug\net7.0\Contracts.pdb
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\OronaApi\bin\Debug\net7.0\Repository.pdb
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\OronaApi\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\OronaApi\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

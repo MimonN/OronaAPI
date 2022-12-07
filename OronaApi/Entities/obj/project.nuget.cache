@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5GsFlpTaHozDnJmC88IlPKsSB+WzwySGWBEJ7luxPLEECcYjdKYTf5pruHnagGa9IxXdUzg+zYBk86gellO60Q==",
+  "dgSpecHash": "UtFWaAtFX7Pbl2/TdlUIdu9twGPa46oHwZLFW3eEAhp1ZddNqVIXkLF/DoOJS38g96Wrt83hdYe5QzVvwTpNzA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\maned\\Documents\\LearningToCode\\ORONA\\OronaAPI\\OronaApi\\Entities\\Entities.csproj",
+  "projectFilePath": "C:\\Users\\maned\\Documents\\LearningToCode\\ORONA\\OronaAPI\\OronaAPI\\Entities\\Entities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\maned\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\maned\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

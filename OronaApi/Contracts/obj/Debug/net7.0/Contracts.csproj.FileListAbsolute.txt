@@ -1,0 +1,15 @@
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\Contracts\bin\Debug\net7.0\Contracts.deps.json
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\Contracts\bin\Debug\net7.0\Contracts.dll
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\Contracts\bin\Debug\net7.0\Contracts.pdb
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\Contracts\bin\Debug\net7.0\Entities.dll
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\Contracts\bin\Debug\net7.0\Entities.pdb
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\Contracts\obj\Debug\net7.0\Contracts.csproj.AssemblyReference.cache
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\Contracts\obj\Debug\net7.0\Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\Contracts\obj\Debug\net7.0\Contracts.AssemblyInfoInputs.cache
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\Contracts\obj\Debug\net7.0\Contracts.AssemblyInfo.cs
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\Contracts\obj\Debug\net7.0\Contracts.csproj.CoreCompileInputs.cache
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\Contracts\obj\Debug\net7.0\Contracts.csproj.CopyComplete
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\Contracts\obj\Debug\net7.0\Contracts.dll
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\Contracts\obj\Debug\net7.0\refint\Contracts.dll
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\Contracts\obj\Debug\net7.0\Contracts.pdb
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\Contracts\obj\Debug\net7.0\ref\Contracts.dll

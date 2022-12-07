@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\maned\\Documents\\LearningToCode\\ORONA\\OronaAPI\\OronaApi\\Entities\\Entities.csproj": {}
+    "C:\\Users\\maned\\Documents\\LearningToCode\\ORONA\\OronaAPI\\OronaAPI\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\maned\\Documents\\LearningToCode\\ORONA\\OronaAPI\\OronaApi\\Entities\\Entities.csproj": {
+    "C:\\Users\\maned\\Documents\\LearningToCode\\ORONA\\OronaAPI\\OronaAPI\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\maned\\Documents\\LearningToCode\\ORONA\\OronaAPI\\OronaApi\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\maned\\Documents\\LearningToCode\\ORONA\\OronaAPI\\OronaAPI\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\maned\\Documents\\LearningToCode\\ORONA\\OronaAPI\\OronaApi\\Entities\\Entities.csproj",
+        "projectPath": "C:\\Users\\maned\\Documents\\LearningToCode\\ORONA\\OronaAPI\\OronaAPI\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\maned\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\maned\\Documents\\LearningToCode\\ORONA\\OronaAPI\\OronaApi\\Entities\\obj\\",
         "projectStyle": "PackageReference",
