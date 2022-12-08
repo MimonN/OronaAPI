@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "uM5CLo8f9GsRw9pkibwg1y58JfSvWO0KloxEth4nJX4=",
+  "Hash": "4cCFjE3k3E61t1+/DfblBTNl28TNXphtijaREaZMNck=",
   "Source": "OronaApi",
   "BasePath": "_content/OronaApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "OronaApi\\wwwroot",
+      "Source": "OronaApi",
+      "ContentRoot": "C:\\Users\\maned\\Documents\\LearningToCode\\ORONA\\OronaAPI\\OronaAPI\\OronaApi\\wwwroot\\",
+      "BasePath": "_content/OronaApi",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }

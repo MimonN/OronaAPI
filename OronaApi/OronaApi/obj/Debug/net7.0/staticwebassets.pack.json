@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\maned\\Documents\\LearningToCode\\ORONA\\OronaAPI\\OronaAPI\\OronaApi\\wwwroot\\Images\\5de27a81-37f8-4216-a718-74e701029eea.png",
+      "PackagePath": "staticwebassets\\Images\\5de27a81-37f8-4216-a718-74e701029eea.png"
+    },
+    {
+      "Id": "C:\\Users\\maned\\Documents\\LearningToCode\\ORONA\\OronaAPI\\OronaAPI\\OronaApi\\wwwroot\\Images\\ba1251be-bd2e-4916-93a2-2faec1e471ef.png",
+      "PackagePath": "staticwebassets\\Images\\ba1251be-bd2e-4916-93a2-2faec1e471ef.png"
+    },
+    {
+      "Id": "C:\\Users\\maned\\Documents\\LearningToCode\\ORONA\\OronaAPI\\OronaAPI\\OronaApi\\wwwroot\\Images\\f708f029-5ed2-45ac-92e2-64fcb386107a.png",
+      "PackagePath": "staticwebassets\\Images\\f708f029-5ed2-45ac-92e2-64fcb386107a.png"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.OronaApi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.OronaApi.props",
+      "PackagePath": "build\\OronaApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.OronaApi.props",
+      "PackagePath": "buildMultiTargeting\\OronaApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.OronaApi.props",
+      "PackagePath": "buildTransitive\\OronaApi.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
