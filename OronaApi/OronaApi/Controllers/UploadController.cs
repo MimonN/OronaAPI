@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Contracts;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Http.Headers;
 
@@ -8,9 +9,30 @@ namespace OronaApi.Controllers
     [ApiController]
     public class UploadController : ControllerBase
     {
-        [HttpPost, DisableRequestSizeLimit]
-        public async Task<IActionResult> Upload()
+        private IUnitOfWork _unitOfWork;
+
+        public UploadController(IUnitOfWork unitOfWork)
         {
+            _unitOfWork = unitOfWork;
+        }
+
+        [HttpPost("{id?}"), DisableRequestSizeLimit]
+        public async Task<IActionResult> Upload(int? id)
+        {
+            if(id != null)
+            {
+                var windowTypeFromDb = await _unitOfWork.WindowType.GetFirstOrDefaultAsync(x => x.Id == id); 
+                if(windowTypeFromDb == null) 
+                {
+                    return NotFound();
+                }
+                var oldImage = windowTypeFromDb.ImageUrl;
+                if (System.IO.File.Exists(oldImage))
+                {
+                    System.IO.File.Delete(oldImage);
+                }
+            }
+
             var formCollection = await Request.ReadFormAsync();
             var file = formCollection.Files.First();
             var folderName = Path.Combine("Resourses", "Images");

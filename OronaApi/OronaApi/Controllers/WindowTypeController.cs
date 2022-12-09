@@ -94,6 +94,13 @@ namespace OronaApi.Controllers
             {
                 return NotFound();
             }
+
+            var oldImage = windowType.ImageUrl;
+            if (System.IO.File.Exists(oldImage))
+            {
+                System.IO.File.Delete(oldImage);
+            }
+
             _unitOfWork.WindowType.Remove(windowType);
             await _unitOfWork.SaveAsync();
 
