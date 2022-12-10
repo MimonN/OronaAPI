@@ -27,6 +27,14 @@ namespace OronaApi.Controllers
             return Ok(windowTypesResult);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> GetAllWindowTypesWithProducts()
+        {
+            var windowTypes = await _unitOfWork.WindowType.GetAllAsync(includeProperties: "Products");
+            var windowTypesResult = _mapper.Map<IEnumerable<WindowTypeWithProductsDto>>(windowTypes);
+            return Ok(windowTypesResult);
+        }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetWindowTypeById(int id)
         {

@@ -1,21 +1,18 @@
-﻿using System;
+﻿using Entities.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entities.Models
+namespace Entities.DataTransferObjects
 {
-    public class WindowType
+    public class WindowTypeWithProductsDto
     {
-        [Key]
         public int Id { get; set; }
-        [Required]
         public string WindowTypeName { get; set; }
         public string? ImageUrl { get; set; }
-
-        [System.Text.Json.Serialization.JsonIgnore]
         public List<Product>? Products { get; set; }
     }
 }

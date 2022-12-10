@@ -16,6 +16,7 @@ namespace Entities.Models
         [Display(Name = "Cleaning Type")]
         public string CleaningName { get; set; }
 
-        public List<Product>? Products { get; set; }
+        //[System.Text.Json.Serialization.JsonIgnore]
+        //public List<Product>? Products { get; set; }
     }
 }

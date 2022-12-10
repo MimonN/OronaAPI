@@ -8,11 +8,12 @@ using System.Threading.Tasks;
 
 namespace Entities.DataTransferObjects
 {
-    public class CleaningTypeDto
+    public class ProductDto
     {
         public int Id { get; set; }
-        public string CleaningName { get; set; }
-
-        //public List<Product>? Products { get; set; }
+        public string? Description { get; set; }
+        public double Price { get; set; }
+        public CleaningTypeDto CleaningType { get; set; }
+        public WindowTypeDto WindowType { get; set; }
     }
 }

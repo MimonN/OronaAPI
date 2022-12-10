@@ -13,6 +13,5 @@ namespace Entities.DataTransferObjects
         public int Id { get; set; }
         public string WindowTypeName { get; set; }
         public string? ImageUrl { get; set; }
-        public List<Product>? Products { get; set; }
     }
 }
