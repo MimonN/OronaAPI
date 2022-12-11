@@ -14,6 +14,8 @@ namespace Entities.DataTransferObjects
         public string? Description { get; set; }
         public double Price { get; set; }
         public CleaningTypeDto CleaningType { get; set; }
+        public int CleaningTypeId { get; set; }
         public WindowTypeDto WindowType { get; set; }
+        public int WindowTypeId { get; set; }
     }
 }
