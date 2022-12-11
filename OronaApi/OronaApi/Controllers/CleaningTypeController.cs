@@ -65,7 +65,7 @@ namespace OronaApi.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateWindowType(int id, [FromBody] CleaningTypeUpdateDto cleaningTypeUpdateDto)
+        public async Task<IActionResult> UpdateCleaningType(int id, [FromBody] CleaningTypeUpdateDto cleaningTypeUpdateDto)
         {
             if (cleaningTypeUpdateDto == null)
             {
