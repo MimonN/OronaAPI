@@ -30,5 +30,11 @@ namespace Repository
             _db.WindowTypes.Update(obj);
             await _db.SaveChangesAsync();
         }
+
+        public async Task<WindowType> WindowTypeExistAsync(WindowType obj)
+        {
+            var windowTypeExist = await _db.WindowTypes.AsNoTracking().FirstOrDefaultAsync(p => p.WindowTypeName == obj.WindowTypeName);
+            return windowTypeExist;
+        }
     }
 }

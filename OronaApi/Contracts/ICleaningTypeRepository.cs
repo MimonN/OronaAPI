@@ -10,5 +10,7 @@ namespace Contracts
     public interface ICleaningTypeRepository : IRepositoryBase<CleaningType>
     {
         Task UpdateAsync(CleaningType obj);
+
+        Task<CleaningType> CleaningTypeExistAsync(CleaningType obj);
     }
 }

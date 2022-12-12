@@ -11,5 +11,6 @@ namespace Contracts
     {
         Task UpdateAsync(WindowType obj);
         Task<IEnumerable<WindowType>> GetAllWindowTypesWithProductsWithCleaningTypes();
+        Task<WindowType> WindowTypeExistAsync(WindowType obj);
     }
 }

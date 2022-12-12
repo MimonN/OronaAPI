@@ -57,10 +57,15 @@ namespace OronaApi.Controllers
             }
 
             var productEntity = _mapper.Map<Product>(productCreateDto);
-            await _unitOfWork.Product.AddAsync(productEntity);
-            await _unitOfWork.SaveAsync();
+            var checkIfProductExists = await _unitOfWork.Product.ProductExistAsync(productEntity);
+            if(checkIfProductExists == null)
+            {
+                await _unitOfWork.Product.AddAsync(productEntity);
+                await _unitOfWork.SaveAsync();
+                return NoContent();
+            }
 
-            return NoContent();
+            return BadRequest("This product already exists.");
         }
 
         [HttpPut("{id}")]
@@ -81,10 +86,16 @@ namespace OronaApi.Controllers
             }
 
             _mapper.Map(productUpdateDto, productEntity);
-            await _unitOfWork.Product.UpdateAsync(productEntity);
-            await _unitOfWork.SaveAsync();
 
-            return NoContent();
+            var checkIfProductExists = await _unitOfWork.Product.ProductExistAsync(productEntity);
+            if (checkIfProductExists == null)
+            {
+                await _unitOfWork.Product.UpdateAsync(productEntity);
+                await _unitOfWork.SaveAsync();
+                return NoContent();
+            }
+
+            return BadRequest("This product already exists.");
         }
 
         [HttpDelete("{id}")]

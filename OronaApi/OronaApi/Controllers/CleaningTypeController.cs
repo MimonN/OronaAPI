@@ -58,10 +58,17 @@ namespace OronaApi.Controllers
             }
 
             var cleaningTypeEntity = _mapper.Map<CleaningType>(cleaningTypeCreateDto);
-            await _unitOfWork.CleaningType.AddAsync(cleaningTypeEntity);
-            await _unitOfWork.SaveAsync();
 
-            return NoContent();
+            var checkIfCleaningExists = await _unitOfWork.CleaningType.CleaningTypeExistAsync(cleaningTypeEntity);
+
+            if (checkIfCleaningExists == null)
+            {
+                await _unitOfWork.CleaningType.AddAsync(cleaningTypeEntity);
+                await _unitOfWork.SaveAsync();
+                return NoContent();
+            }
+
+            return BadRequest("This cleaning type already exists.");
         }
 
         [HttpPut("{id}")]
@@ -82,10 +89,17 @@ namespace OronaApi.Controllers
             }
 
             _mapper.Map(cleaningTypeUpdateDto, cleaningTypeEntity);
-            await _unitOfWork.CleaningType.UpdateAsync(cleaningTypeEntity);
-            await _unitOfWork.SaveAsync();
 
-            return NoContent();
+            var checkIfCleaningExists = await _unitOfWork.CleaningType.CleaningTypeExistAsync(cleaningTypeEntity);
+
+            if (checkIfCleaningExists == null)
+            {
+                await _unitOfWork.CleaningType.AddAsync(cleaningTypeEntity);
+                await _unitOfWork.SaveAsync();
+                return NoContent();
+            }
+
+            return BadRequest("This cleaning type already exists.");
         }
 
         [HttpDelete("{id}")]

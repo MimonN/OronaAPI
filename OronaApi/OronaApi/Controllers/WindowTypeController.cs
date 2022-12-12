@@ -64,10 +64,16 @@ namespace OronaApi.Controllers
             }
 
             var windowTypeEntity = _mapper.Map<WindowType>(windowTypeCreateDto);
-            await _unitOfWork.WindowType.AddAsync(windowTypeEntity);
-            await _unitOfWork.SaveAsync();
+            var checkIfWindowTypeExists = await _unitOfWork.WindowType.WindowTypeExistAsync(windowTypeEntity);
 
-            return NoContent();
+            if (checkIfWindowTypeExists == null)
+            {
+                await _unitOfWork.WindowType.AddAsync(windowTypeEntity);
+                await _unitOfWork.SaveAsync();
+                return NoContent();
+            }
+
+            return BadRequest("This window type already exists.");
         }
 
         [HttpPut("{id}")]
@@ -88,10 +94,17 @@ namespace OronaApi.Controllers
             }
 
             _mapper.Map(windowTypeUpdateDto, windowTypeEntity);
-            await _unitOfWork.WindowType.UpdateAsync(windowTypeEntity);
-            await _unitOfWork.SaveAsync();
 
-            return NoContent();
+            var checkIfWindowTypeExists = await _unitOfWork.WindowType.WindowTypeExistAsync(windowTypeEntity);
+
+            if (checkIfWindowTypeExists == null)
+            {
+                await _unitOfWork.WindowType.AddAsync(windowTypeEntity);
+                await _unitOfWork.SaveAsync();
+                return NoContent();
+            }
+
+            return BadRequest("This window type already exists.");
         }
 
         [HttpDelete("{id}")]
