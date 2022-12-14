@@ -94,7 +94,7 @@ namespace OronaApi.Controllers
 
             if (checkIfCleaningExists == null)
             {
-                await _unitOfWork.CleaningType.AddAsync(cleaningTypeEntity);
+                await _unitOfWork.CleaningType.UpdateAsync(cleaningTypeEntity);
                 await _unitOfWork.SaveAsync();
                 return NoContent();
             }

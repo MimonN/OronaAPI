@@ -10,6 +10,7 @@ namespace OronaApi
         {
             CreateMap<WindowType, WindowTypeDto>().ReverseMap();
             CreateMap<WindowType, WindowTypeWithProductsDto>().ReverseMap();
+            CreateMap<WindowType, WindowTypeWithProductsAndCleaningTypesDto>().ReverseMap();
             CreateMap<WindowType, WindowTypeCreateDto>().ReverseMap();
             CreateMap<WindowType, WindowTypeUpdateDto>().ReverseMap();
 

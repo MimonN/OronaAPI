@@ -35,6 +35,14 @@ namespace OronaApi.Controllers
             return Ok(windowTypesResult);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> GetAllWindowTypesWithProductsAndCleaningTypes()
+        {
+            var windowTypes = await _unitOfWork.WindowType.GetAllWindowTypesWithProductsWithCleaningTypes();
+            var windowTypesResult = _mapper.Map<IEnumerable<WindowTypeWithProductsAndCleaningTypesDto>>(windowTypes);
+            return Ok(windowTypesResult);
+        }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetWindowTypeById(int id)
         {
@@ -99,7 +107,7 @@ namespace OronaApi.Controllers
 
             if (checkIfWindowTypeExists == null)
             {
-                await _unitOfWork.WindowType.AddAsync(windowTypeEntity);
+                await _unitOfWork.WindowType.UpdateAsync(windowTypeEntity);
                 await _unitOfWork.SaveAsync();
                 return NoContent();
             }

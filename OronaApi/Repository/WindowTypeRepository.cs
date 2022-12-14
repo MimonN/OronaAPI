@@ -33,7 +33,7 @@ namespace Repository
 
         public async Task<WindowType> WindowTypeExistAsync(WindowType obj)
         {
-            var windowTypeExist = await _db.WindowTypes.AsNoTracking().FirstOrDefaultAsync(p => p.WindowTypeName == obj.WindowTypeName);
+            var windowTypeExist = await _db.WindowTypes.AsNoTracking().Where(x => x.ImageUrl == obj.ImageUrl).FirstOrDefaultAsync(p => p.WindowTypeName == obj.WindowTypeName);
             return windowTypeExist;
         }
     }

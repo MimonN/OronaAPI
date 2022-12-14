@@ -74,6 +74,27 @@ namespace Entities.Migrations
                     b.ToTable("Products");
                 });
 
+            modelBuilder.Entity("Entities.Models.ShoppingCart", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ShoppingCarts");
+                });
+
             modelBuilder.Entity("Entities.Models.WindowType", b =>
                 {
                     b.Property<int>("Id")
@@ -97,7 +118,7 @@ namespace Entities.Migrations
             modelBuilder.Entity("Entities.Models.Product", b =>
                 {
                     b.HasOne("Entities.Models.CleaningType", "CleaningType")
-                        .WithMany("Products")
+                        .WithMany()
                         .HasForeignKey("CleaningTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -113,9 +134,15 @@ namespace Entities.Migrations
                     b.Navigation("WindowType");
                 });
 
-            modelBuilder.Entity("Entities.Models.CleaningType", b =>
+            modelBuilder.Entity("Entities.Models.ShoppingCart", b =>
                 {
-                    b.Navigation("Products");
+                    b.HasOne("Entities.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("Entities.Models.WindowType", b =>

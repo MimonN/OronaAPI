@@ -15,5 +15,7 @@ namespace Entities
         public DbSet<WindowType> WindowTypes { get; set; }
         public DbSet<CleaningType> CleaningTypes { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<ShoppingCart> ShoppingCarts { get; set; }
+
     }
 }

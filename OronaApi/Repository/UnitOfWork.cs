@@ -18,12 +18,15 @@ namespace Repository
             CleaningType = new CleaningTypeRepository(_db);
             WindowType = new WindowTypeRepository(_db);
             Product = new ProductRepository(_db);
+            ShoppingCart = new ShoppingCartRepository(_db);
         }
         public IWindowTypeRepository WindowType {  get; private set; }
 
         public ICleaningTypeRepository CleaningType { get; private set; }
 
         public IProductRepository Product { get; private set; }
+
+        public IShoppingCartRepository ShoppingCart { get; private set; }
 
         public async Task SaveAsync()
         {

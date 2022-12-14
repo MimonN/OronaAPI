@@ -11,6 +11,7 @@ namespace Contracts
         IWindowTypeRepository WindowType { get; }
         ICleaningTypeRepository CleaningType { get; }
         IProductRepository Product { get; }
+        IShoppingCartRepository ShoppingCart { get; }
 
         Task SaveAsync();
     }
