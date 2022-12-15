@@ -139,7 +139,7 @@
         "projectName": "OronaApi",
         "projectPath": "C:\\Users\\maned\\Documents\\LearningToCode\\ORONA\\OronaAPI\\OronaAPI\\OronaApi\\OronaApi.csproj",
         "packagesPath": "C:\\Users\\maned\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\maned\\Documents\\LearningToCode\\ORONA\\OronaAPI\\OronaApi\\OronaApi\\obj\\",
+        "outputPath": "C:\\Users\\maned\\Documents\\LearningToCode\\ORONA\\OronaAPI\\OronaAPI\\OronaApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\maned\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -185,6 +185,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.1, )"
             },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
@@ -263,6 +267,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

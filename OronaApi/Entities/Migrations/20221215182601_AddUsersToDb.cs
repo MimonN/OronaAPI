@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Entities.Migrations
 {
     /// <inheritdoc />
-    public partial class InitCleningTypeWindowTypeProduct : Migration
+    public partial class AddUsersToDb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -22,6 +22,22 @@ namespace Entities.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_CleaningTypes", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "LocalUsers",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Role = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_LocalUsers", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -68,6 +84,26 @@ namespace Entities.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "ShoppingCarts",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ProductId = table.Column<int>(type: "int", nullable: false),
+                    Count = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ShoppingCarts", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ShoppingCarts_Products_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "Products",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Products_CleaningTypeId",
                 table: "Products",
@@ -77,11 +113,22 @@ namespace Entities.Migrations
                 name: "IX_Products_WindowTypeId",
                 table: "Products",
                 column: "WindowTypeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ShoppingCarts_ProductId",
+                table: "ShoppingCarts",
+                column: "ProductId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "LocalUsers");
+
+            migrationBuilder.DropTable(
+                name: "ShoppingCarts");
+
             migrationBuilder.DropTable(
                 name: "Products");
 

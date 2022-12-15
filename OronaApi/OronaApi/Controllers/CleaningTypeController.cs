@@ -2,6 +2,7 @@
 using Contracts;
 using Entities.DataTransferObjects;
 using Entities.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -30,6 +31,7 @@ namespace OronaApi.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize(Roles = "CUSTOM")]
         public async Task<IActionResult> GetCleaningTypeById(int id)
         {
             var cleaningType = await _unitOfWork.CleaningType.GetFirstOrDefaultAsync(x => x.Id == id);
@@ -45,6 +47,7 @@ namespace OronaApi.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> CreateCleaningType([FromBody] CleaningTypeCreateDto cleaningTypeCreateDto)
         {
             if (cleaningTypeCreateDto == null)
@@ -72,6 +75,7 @@ namespace OronaApi.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> UpdateCleaningType(int id, [FromBody] CleaningTypeUpdateDto cleaningTypeUpdateDto)
         {
             if (cleaningTypeUpdateDto == null)
@@ -103,6 +107,7 @@ namespace OronaApi.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> DeleteCleaningType(int id)
         {
             var cleaningType = await _unitOfWork.CleaningType.GetFirstOrDefaultAsync(x => x.Id == id);

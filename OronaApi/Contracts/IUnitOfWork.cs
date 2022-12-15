@@ -12,6 +12,7 @@ namespace Contracts
         ICleaningTypeRepository CleaningType { get; }
         IProductRepository Product { get; }
         IShoppingCartRepository ShoppingCart { get; }
+        IUserRepository LocalUser { get; }
 
         Task SaveAsync();
     }

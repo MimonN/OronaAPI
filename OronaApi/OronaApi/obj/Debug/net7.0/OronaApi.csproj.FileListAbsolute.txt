@@ -82,3 +82,5 @@ C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\OronaApi\bin\Deb
 C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\OronaApi\bin\Debug\net7.0\AutoMapper.dll
 C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaApi\OronaApi\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaAPI\OronaApi\bin\Debug\net7.0\OronaApi.staticwebassets.runtime.json
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaAPI\OronaApi\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\maned\Documents\LearningToCode\ORONA\OronaAPI\OronaAPI\OronaApi\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

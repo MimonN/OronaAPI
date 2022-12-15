@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gCgVYsBCNvSCqgYNoghXNvBflsw45BQg9cQ+41OKrqet5moW8XORf5aBfXCfNZ0Ud8aqtUvArsyouhv+MlUAhw==",
+  "dgSpecHash": "ytQRVRxTXI3X8jKH+2KYYGSHeo89v/pZALiCrz9i+FpwGxrqfUVnSjlMr92QGqjt7r//qBBMvC6LOBjKdUCThw==",
   "success": true,
   "projectFilePath": "C:\\Users\\maned\\Documents\\LearningToCode\\ORONA\\OronaAPI\\OronaAPI\\Repository\\Repository.csproj",
   "expectedPackageFiles": [
@@ -18,6 +18,7 @@
     "C:\\Users\\maned\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\maned\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
     "C:\\Users\\maned\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\maned\\.nuget\\packages\\microsoft.extensions.configuration.binder\\7.0.1\\microsoft.extensions.configuration.binder.7.0.1.nupkg.sha512",
     "C:\\Users\\maned\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\maned\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\maned\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
