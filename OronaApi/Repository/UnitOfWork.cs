@@ -1,5 +1,8 @@
-﻿using Contracts;
+﻿using AutoMapper;
+using Contracts;
 using Entities;
+using Entities.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -14,15 +17,23 @@ namespace Repository
     {
         private ApplicationDbContext _db;
         private IConfiguration _configuration;
-        public UnitOfWork(ApplicationDbContext db, IConfiguration configuration)
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
+        private IMapper _mapper;
+        public UnitOfWork(ApplicationDbContext db, IConfiguration configuration, UserManager<ApplicationUser> userManager, IMapper mapper, 
+            RoleManager<IdentityRole> roleManager)
         {
+            _mapper = mapper;
+            _userManager = userManager;
+            _roleManager = roleManager;
             _configuration = configuration;
             _db = db;
             CleaningType = new CleaningTypeRepository(_db);
             WindowType = new WindowTypeRepository(_db);
             Product = new ProductRepository(_db);
             ShoppingCart = new ShoppingCartRepository(_db);
-            LocalUser = new UserRepository(_db, _configuration);
+            ApplicationUser = new UserRepository(_db, _configuration, _userManager, _mapper, _roleManager);
+            _roleManager = roleManager; 
         }
         public IWindowTypeRepository WindowType {  get; private set; }
 
@@ -31,7 +42,7 @@ namespace Repository
         public IProductRepository Product { get; private set; }
 
         public IShoppingCartRepository ShoppingCart { get; private set; }
-        public IUserRepository LocalUser { get; private set; }
+        public IUserRepository ApplicationUser { get; private set; }
 
         public async Task SaveAsync()
         {

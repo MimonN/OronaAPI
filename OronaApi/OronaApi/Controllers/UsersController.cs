@@ -18,7 +18,7 @@ namespace OronaApi.Controllers
         [HttpPost]
         public async Task<IActionResult> Login([FromBody] LoginRequestDto model)
         {
-            var loginRespone = await _unitOfWork.LocalUser.LoginAsync(model);
+            var loginRespone = await _unitOfWork.ApplicationUser.LoginAsync(model);
             if(loginRespone.User == null || string.IsNullOrEmpty(loginRespone.Token))
             {
                 return BadRequest(new {message = "Username or password is incorrect"});
@@ -30,13 +30,13 @@ namespace OronaApi.Controllers
         [HttpPost]
         public async Task<IActionResult> Register([FromBody] RegistrationRequestDto model)
         {
-            bool ifUserNameUnique = await _unitOfWork.LocalUser.IsUniqueUserAsync(model.UserName);
+            bool ifUserNameUnique = await _unitOfWork.ApplicationUser.IsUniqueUserAsync(model.UserName);
             if(!ifUserNameUnique)
             {
                 return BadRequest(new {message = "Username already exists"});
             }
 
-            var user = await _unitOfWork.LocalUser.RegisterAsync(model);
+            var user = await _unitOfWork.ApplicationUser.RegisterAsync(model);
             if(user == null)
             {
                 return BadRequest(new { message = "Error while registering" });

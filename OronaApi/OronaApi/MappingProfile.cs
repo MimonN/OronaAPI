@@ -21,6 +21,8 @@ namespace OronaApi
             CreateMap<Product, ProductDto>().ReverseMap();
             CreateMap<Product, ProductUpdateDto>().ReverseMap();
             CreateMap<Product, ProductCreateDto>().ReverseMap();
+
+            CreateMap<ApplicationUser, UserDto>().ReverseMap();
         }
     }
 }

@@ -12,7 +12,7 @@ namespace Contracts
     {
         Task<bool> IsUniqueUserAsync(string username);
         Task<LoginResponseDto> LoginAsync(LoginRequestDto loginRequestDto);
-        Task<LocalUser> RegisterAsync(RegistrationRequestDto registrationRequestDto);
+        Task<UserDto> RegisterAsync(RegistrationRequestDto registrationRequestDto);
 
     }
 }
